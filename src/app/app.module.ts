@@ -9,6 +9,7 @@ import { Submenu1Component } from './menu-principal/submenu1/submenu1.component'
 import { Submenu2Component } from './menu-principal/submenu2/submenu2.component';
 import { Submenu3Component } from './menu-principal/submenu3/submenu3.component';
 import { Router, RouterModule } from '@angular/router';
+import { FilenotfoundComponent } from './filenotfound/filenotfound.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { Router, RouterModule } from '@angular/router';
     Submenu1Component,
     Submenu2Component,
     Submenu3Component,
+    FilenotfoundComponent,
   ],
   imports: [
     BrowserModule,
