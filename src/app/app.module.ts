@@ -10,6 +10,8 @@ import { Submenu2Component } from './menu-principal/submenu2/submenu2.component'
 import { Submenu3Component } from './menu-principal/submenu3/submenu3.component';
 import { Router, RouterModule } from '@angular/router';
 import { FilenotfoundComponent } from './filenotfound/filenotfound.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from "./angular-material/material/material.module";
 
 @NgModule({
   declarations: [
@@ -19,10 +21,11 @@ import { FilenotfoundComponent } from './filenotfound/filenotfound.component';
     Submenu1Component,
     Submenu2Component,
     Submenu3Component,
-    FilenotfoundComponent,
+    FilenotfoundComponent
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: 'menuprincipal', component: MenuPrincipalComponent,
@@ -34,7 +37,8 @@ import { FilenotfoundComponent } from './filenotfound/filenotfound.component';
    ]
   },
   {path: '', redirectTo: 'menuprincipal', pathMatch: 'full'}
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
