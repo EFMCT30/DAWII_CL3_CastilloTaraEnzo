@@ -1,1 +1,29 @@
-<p>submenu1 works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Calculadora de Descuento</h2>
+          <form>
+            <div class="form-group">
+              <label>Cantidad:</label>
+              <input type="number" [(ngModel)]="cantidad" name="cantidad" required class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Precio unitario:</label>
+              <input type="number" [(ngModel)]="precio" name="precio" required class="form-control">
+            </div>
+            <div class="text-center">
+              <button (click)="calcularDescuento()" class="btn btn-primary">Calcular Descuento</button>
+            </div>
+          </form>
+          <hr>
+          <div *ngIf="mostrarResultado" class="text-center">
+            <p class="card-text">El total a pagar es: {{ totalAPagar }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
