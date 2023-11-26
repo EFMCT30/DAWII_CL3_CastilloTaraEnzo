@@ -1,1 +1,24 @@
-<p>submenu2 works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Calculadora de Préstamos</h2>
+          <form (ngSubmit)="calcularPrestamo()">
+            <div class="form-group">
+              <label for="monto">Monto del Préstamo:</label>
+              <input type="number" class="form-control" id="monto" [(ngModel)]="montoPrestamo" name="monto" required>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Calcular</button>
+            </div>
+          </form>
+          <hr>
+          <div *ngIf="montoPorCuota > 0" class="text-center">
+            <p>Deberá pagar en {{ cuotas }} cuotas de {{ montoPorCuota | currency:'USD':'symbol':'1.2-2' }} cada una.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
